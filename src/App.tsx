@@ -6,7 +6,6 @@ import GameButtons from "./components/GameButtons";
 import GameDirections from "./components/GameDirections";
 import Header from "./components/Header";
 import useHandleColorClick from "./hooks/useHandleColorClick";
-import useHandlePlay from "./hooks/useHandlePlay";
 
 function App() {
 
