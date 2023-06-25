@@ -1,3 +1,4 @@
+import styles from './Timer.module.css'
 import { useEffect } from "react"
 
 type Props = {
@@ -22,7 +23,7 @@ function Timer({status, time, setTime}: Props) {
         }
       },[status])
   return (
-    <h1>{time} Seconds</h1>
+    <h1 className={styles.h1}>{time} Seconds</h1>
   )
 }
 

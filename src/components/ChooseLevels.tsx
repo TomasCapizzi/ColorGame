@@ -1,4 +1,5 @@
 import { Color } from "../types/Color"
+import styles from './ChooseLevels.module.css'
 import useHandlePlay from "../hooks/useHandlePlay"
 
 type Props = {
@@ -14,11 +15,14 @@ export default function ChooseLevels({setTime, setMoves, setScore, setStatus, se
     const {handlePlayEasy, handlePlayHard} = useHandlePlay({setTime, setMoves, setScore, setStatus, setGameColors})
 
   return (
-    <div>
+    <div className={styles.choose_levels}>
         <h1>Let's Play!</h1>
-        <p>Choose Difficulty</p>
-        <button onClick={handlePlayEasy}>Easy</button>
-        <button onClick={handlePlayHard}>Hard</button>
+        <p className={styles.choose_levels_p}>Choose Difficulty</p>
+        <div className={styles.buttons_cont}>
+          <button onClick={handlePlayEasy}>Easy</button>
+          <button onClick={handlePlayHard}>Hard</button>
+        </div>
+
     </div>
   )
 }

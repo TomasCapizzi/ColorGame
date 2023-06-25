@@ -1,4 +1,5 @@
 import  {Color} from '../types/Color'
+import styles from './GameDirections.module.css'
 
 type Props = {
     moves: number,
@@ -8,7 +9,7 @@ type Props = {
 
 export default function GameDirections({moves, gameColors, correctColor}: Props) {
   return (
-    <section>
+    <section className={styles.section}>
         <p>{moves}</p>
         <span style={{textTransform: 'capitalize', color: gameColors[0].color}}>{correctColor.name}</span>
     </section>

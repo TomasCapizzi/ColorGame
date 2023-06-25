@@ -1,5 +1,6 @@
 import Score from './Score';
 import Timer from './Timer';
+import styles from './Header.module.css'
 
 type Props = {
     score: number;
@@ -10,7 +11,7 @@ type Props = {
 
 export default function Header({score, status, time, setTime}: Props) {
   return (
-    <header>
+    <header className={styles.header}>
         <Score score={score} />
         <Timer status={status} time={time} setTime={setTime} />
     </header>
